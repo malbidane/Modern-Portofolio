@@ -1,0 +1,37 @@
+
+$Primary-Color: #444;
+$Secondry-Color:#eece1a;
+$Show-Home-Image:true;
+$Home-Image:url("/dist/img/Home-Background1.jpg");
+$Background-Opacity:0.8;
+
+@mixin easeOut {
+    transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+}
+
+@mixin Background {
+    @if $Show-Home-Image {
+        &#bg-img {
+            background: $Home-Image;
+            background-attachment: fixed;
+            background-size: cover;
+
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba($Primary-Color, $Background-Opacity);
+                z-index: -1;
+            }
+        }
+    }
+}
+

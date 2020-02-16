@@ -1,4 +1,3 @@
-
 $Primary-Color: #444;
 $Secondry-Color:#eece1a;
 $Show-Home-Image:true;
@@ -11,6 +10,14 @@ $Background-Opacity:0.8;
     -moz-transition: all 0.5s ease-out;
     -ms-transition: all 0.5s ease-out;
     -o-transition: all 0.5s ease-out;
+}
+
+@mixin BorderRadius {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 @mixin Background {
@@ -34,4 +41,3 @@ $Background-Opacity:0.8;
         }
     }
 }
-

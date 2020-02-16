@@ -66,6 +66,18 @@
             height: 150px;
         }
     }
+
+    // Page About
+
+    .about-info {
+        grid-template-areas:
+            "Bio-img"
+            "bio"
+            "job1"
+            "job2"
+            "job3";
+        grid-template-columns: 1fr;
+    }
 }
 
 

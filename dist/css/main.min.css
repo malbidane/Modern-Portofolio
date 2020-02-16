@@ -122,7 +122,8 @@
   -webkit-transition: all 0.5s ease-out;
   -moz-transition: all 0.5s ease-out;
   -ms-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out; }
+  -o-transition: all 0.5s ease-out;
+  color: #fff; }
 
 .menu-nav .nav-item .nav-link:hover {
   color: #eece1a; }
@@ -174,48 +175,6 @@
 
 .nav-item:nth-child(4) {
   transition-delay: .4s; }
-
-@media screen and (max-width: 768px) {
-  main {
-    align-items: center;
-    text-align: center; }
-  main .lg-heading {
-    line-height: 1;
-    margin-bottom: 1rem; }
-  ul.menu-nav, div.menu-brand {
-    float: left;
-    width: 100%;
-    min-height: 0; }
-  ul.menu-nav.show, div.menu-brand.show {
-    transform: translate3d(0, 0, 0);
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    -o-transform: translate3d(0, 0, 0); }
-  .menu-nav {
-    height: 70vh;
-    transform: translate3d(-100%, 0, 0);
-    -webkit-transform: translate3d(-100%, 0, 0);
-    -moz-transform: translate3d(-100%, 0, 0);
-    -ms-transform: translate3d(-100%, 0, 0);
-    -o-transform: translate3d(-100%, 0, 0);
-    font-size: 24px; }
-  .menu-brand {
-    height: 30vh;
-    transform: translate3d(100%, 0, 0);
-    -webkit-transform: translate3d(100%, 0, 0);
-    -moz-transform: translate3d(100%, 0, 0);
-    -ms-transform: translate3d(100%, 0, 0);
-    -o-transform: translate3d(100%, 0, 0); }
-  .menu-brand .portaiat {
-    background: url("../img/46562690.png");
-    background-size: cover;
-    width: 150px;
-    height: 150px; } }
-
-@media screen and (max-width: 500px) {
-  main#home h1.lg-heading {
-    margin-top: 10vh; } }
 
 * {
   box-sizing: border-box; }
@@ -270,7 +229,7 @@ header {
 
 main {
   padding: 4rem;
-  height: 100%; }
+  min-height: calc(100vh - 50px); }
 
 main .icon {
   margin-top: 1rem; }
@@ -291,3 +250,91 @@ main#Home {
 
 main#Home h1 {
   margin-top: 20vh; }
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: "Bio-img bio bio" "job1 job2 job3";
+  grid-template-columns: repeat(3, 1fr); }
+
+.about-info .Bio-img {
+  grid-area: Bio-img;
+  margin: auto;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  width: 220px;
+  height: 220px;
+  border: 3px solid #eece1a; }
+
+.about-info .bio {
+  grid-area: bio;
+  font-size: 1.3rem; }
+
+.about-info .job {
+  background-color: #4e4e4e;
+  border-bottom: 5px solid #eece1a;
+  padding: 1rem; }
+
+.about-info .job-1 {
+  grid-area: job1; }
+
+.about-info .job-2 {
+  grid-area: job2; }
+
+.about-info .job-3 {
+  grid-area: job3; }
+
+#main-footer {
+  background-color: #2b2b2b;
+  color: #fff;
+  text-align: center;
+  padding: 0.75rem;
+  height: 50px; }
+
+#main-footer span {
+  color: #eece1a; }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+  main .lg-heading {
+    line-height: 1;
+    margin-bottom: 1rem; }
+  ul.menu-nav, div.menu-brand {
+    float: left;
+    width: 100%;
+    min-height: 0; }
+  ul.menu-nav.show, div.menu-brand.show {
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 70vh;
+    transform: translate3d(-100%, 0, 0);
+    -webkit-transform: translate3d(-100%, 0, 0);
+    -moz-transform: translate3d(-100%, 0, 0);
+    -ms-transform: translate3d(-100%, 0, 0);
+    -o-transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  .menu-brand {
+    height: 30vh;
+    transform: translate3d(100%, 0, 0);
+    -webkit-transform: translate3d(100%, 0, 0);
+    -moz-transform: translate3d(100%, 0, 0);
+    -ms-transform: translate3d(100%, 0, 0);
+    -o-transform: translate3d(100%, 0, 0); }
+  .menu-brand .portaiat {
+    background: url("../img/46562690.png");
+    background-size: cover;
+    width: 150px;
+    height: 150px; } }
+
+@media screen and (max-width: 500px) {
+  main#home h1.lg-heading {
+    margin-top: 10vh; } }

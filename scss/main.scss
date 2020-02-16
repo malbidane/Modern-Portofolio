@@ -1,6 +1,6 @@
 @import "config.scss";
 @import "menu.scss";
-@import "mobile.scss";
+
 
 * {
     box-sizing: border-box;
@@ -9,7 +9,7 @@
 
 body {
     background-color: $Primary-Color;
-    color: #fff;
+    color: Set-textColor($Primary-Color);
     margin: 0;
     height: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -54,7 +54,8 @@ header {
 
 main {
     padding: 4rem;
-    height: 100%;
+    //height: 100%;
+    min-height: calc(100vh - 50px);
 
     .icon {
         margin-top: 1rem;
@@ -78,3 +79,61 @@ main {
         }
     }
 }
+
+// About Page 
+
+.about-info {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas:
+        "Bio-img bio bio"
+        "job1 job2 job3";
+    grid-template-columns: repeat(3, 1fr);
+
+    .Bio-img {
+        grid-area: Bio-img;
+        margin: auto;
+        @include BorderRadius;
+        width: 220px;
+        height: 220px;
+        border: 3px solid #eece1a;
+
+    }
+
+    .bio {
+        grid-area: bio;
+        font-size: 1.3rem;
+    }
+
+    .job {
+        background-color: lighten($Primary-Color, 4);
+        border-bottom: 5px solid $Secondry-Color;
+        padding: 1rem;
+    }
+
+    .job-1 {
+        grid-area: job1;
+    }
+
+    .job-2 {
+        grid-area: job2;
+    }
+
+    .job-3 {
+        grid-area: job3;
+    }
+}
+
+#main-footer {
+    background-color: darken($Primary-Color, 10);
+    color: Set-textColor($Primary-Color);
+    text-align: center;
+    padding: 0.75rem;
+    height: 50px;
+
+    span {
+        color: $Secondry-Color;
+    }
+}
+
+@import "mobile.scss";

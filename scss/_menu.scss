@@ -11,7 +11,7 @@
     .btn-line {
         width: 28px;
         height: 3px;
-        background-color: #fff;
+        background-color: Set-textColor($Primary-Color);
         margin-bottom: 5px;
         @include easeOut;
     }
@@ -126,6 +126,8 @@
                 font-weight: 500;
                 text-decoration: none;
                 @include easeOut;
+                color: Set-textColor($Primary-Color);
+
 
                 &:hover {
                     color: $Secondry-Color;

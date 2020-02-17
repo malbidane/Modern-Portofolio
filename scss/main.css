@@ -342,6 +342,30 @@ main#Home h1 {
   grid-area: job3;
 }
 
+.Projects {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /*display: grid;
+    grid-auto-columns: repeat(3, 1fr);
+    grid-gap: 0.7rem;*/
+}
+
+.Projects .item img {
+  width: 100%;
+  border: 3px solid #ffff;
+  transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+}
+
+.Projects .item img:hover {
+  opacity: 0.5;
+  border-color: #eece1a;
+}
+
 #main-footer {
   background-color: #2b2b2b;
   color: #fff;
@@ -399,6 +423,10 @@ main#Home h1 {
     background-size: cover;
     width: 150px;
     height: 150px;
+  }
+  .about-info {
+    grid-template-areas: "Bio-img" "bio" "job1" "job2" "job3";
+    grid-template-columns: 1fr;
   }
 }
 

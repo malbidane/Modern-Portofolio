@@ -17,6 +17,7 @@ body {
     @include Background;
 }
 
+//! index page
 //? Heading
 
 h1,
@@ -80,7 +81,7 @@ main {
     }
 }
 
-// About Page 
+//! About Page 
 
 .about-info {
     display: grid;
@@ -123,6 +124,40 @@ main {
         grid-area: job3;
     }
 }
+
+//! Work Page 
+
+.Projects {
+
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    /*display: grid;
+    grid-auto-columns: repeat(3, 1fr);
+    grid-gap: 0.7rem;*/
+
+    .item {
+
+
+        img {
+            width: 100%;
+            border: 3px solid #ffff;
+            @include easeOut;
+
+            &:hover {
+                opacity: 0.5;
+                border-color: $Secondry-Color;
+            }
+        }
+    }
+}
+
+
+
+
+
 
 #main-footer {
     background-color: darken($Primary-Color, 10);

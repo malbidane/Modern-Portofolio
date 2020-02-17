@@ -140,6 +140,7 @@ main {
 
     .item {
 
+        margin: 5px;
 
         img {
             width: 100%;
@@ -149,9 +150,41 @@ main {
             &:hover {
                 opacity: 0.5;
                 border-color: $Secondry-Color;
+                background-color: $Secondry-Color;
+                color: $Primary-Color;
             }
         }
+
+        .btn {
+            display: block;
+            padding: 0.5rem 1rem;
+            border: 0;
+            margin-bottom: 0.3rem;
+
+            &:hover {
+                background-color: $Secondry-Color;
+                color: Set-textColor($Primary-Color);
+
+            }
+
+        }
+
+        .btn-Dark {
+            @extend .btn;
+            background-color: darken($Primary-Color, 50);
+            color: #fff;
+        }
+
+        .btn-light {
+            @extend .btn;
+            background-color: lighten($Primary-Color, 50);
+            color: #333;
+        }
     }
+
+    // btn style
+
+
 }
 
 

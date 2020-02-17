@@ -78,6 +78,21 @@
             "job3";
         grid-template-columns: 1fr;
     }
+
+    .Projects {
+
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .lg-heading {
+        margin-top: 10vh;
+    }
+
+
 }
 
 
@@ -86,7 +101,7 @@
 @include mediaSm {
 
     main#home h1.lg-heading {
-        margin-top: 10vh;
+        margin-top: 20vh;
 
     }
 }
